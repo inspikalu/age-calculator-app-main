@@ -1,0 +1,174 @@
+$Purple: hsl(259, 100%, 65%);
+$LightRed: hsl(0, 100%, 67%);
+
+$White: hsl(0, 0%, 100%);
+$OffWhite: hsl(0, 0%, 94%);
+$LightGrey: hsl(0, 0%, 86%);
+$SmokeyGrey: hsl(0, 1%, 44%);
+$OffBlack: hsl(0, 0%, 8%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+}
+
+body {
+  background-color: $LightGrey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+  form {
+    background-color: $White;
+    border-radius: 1em 1em 10em 1em;
+    max-width: 90%;
+    padding-inline: 3rem;
+
+    .dateHolder {
+      display: grid;
+      max-width: 100%;
+      grid-template-areas:
+        "dayLabel monthLabel yearLabel"
+        "dayInput monthInput yearInput"
+        "dayError monthError yearError";
+      gap: 1rem;
+      padding: 2rem 1rem;
+
+      input {
+        padding: 1rem 0.4rem;
+        border-radius: 0.5rem;
+        border: 1px solid $OffBlack;
+        text-indent: 1em;
+        min-width: 100%;
+      }
+
+      input:hover {
+        transition: all .2s;
+        border: 2px solid $Purple;
+      }
+
+      input.error {
+        border-color: $LightRed;
+      }
+
+      label {
+        color: $SmokeyGrey;
+        padding-left: 0.3em;
+      }
+
+      label.error {
+        color: $LightRed;
+      }
+
+      label[for="day"] {
+        grid-area: dayLabel;
+      }
+
+      input#day {
+        grid-area: dayInput;
+      }
+
+      label[for="month"] {
+        grid-area: monthLabel;
+      }
+
+      input#month {
+        grid-area: monthInput;
+      }
+
+      label[for="year"] {
+        grid-area: yearLabel;
+      }
+
+      input#year {
+        grid-area: yearInput;
+      }
+
+      .dayError {
+        grid-area: dayError;
+      }
+
+      .monthError {
+        grid-area: monthError;
+      }
+
+      .yearError {
+        grid-area: yearError;
+      }
+
+      .dayError,
+      .monthError,
+      .yearError {
+        color: $LightRed;
+      }
+    }
+
+    .dateSeparator {
+      position: relative;
+
+      hr {
+        width: 100%;
+      }
+
+      button {
+        background-color: $Purple;
+        border: 0;
+        border-radius: 2rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: $OffBlack !important;
+      }
+    }
+
+    .dateLabel {
+      font-size: 3rem;
+      font-family: Poppins;
+      padding: 2.4rem 1.4rem 5rem 1.4rem;
+
+      .date__Text {
+        span {
+          color: $Purple;
+          letter-spacing: -4px;
+          font-weight: bolder;
+        }
+      }
+    }
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 720px) {
+  body {
+    form {
+      max-width: 60%;
+
+      .dateHolder {
+        width: 80%;
+      }
+
+      .dateSeparator {
+        button {
+          left: 93%;
+        }
+      }
+    }
+  }
+}

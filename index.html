@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="/assets/css/styles.css"/>
+
+    <title>Frontend Mentor | Age calculator app</title>
+</head>
+<body>
+<form class="container">
+    <section class="dateHolder">
+        <label class="dayLabel" for="day">Day</label>
+        <input type="text" maxlength="2" name="day" id="day" placeholder="DD"/>
+        <span class="dayError"></span>
+
+        <label class="monthLabel" for="month">Month</label>
+        <input
+                type="text"
+                maxlength="2"
+                name="month"
+                id="month"
+                placeholder="MM"
+        />
+        <span class="monthError"></span>
+
+        <label class="yearLabel" for="year">Year</label>
+        <input
+                type="text"
+                maxlength="4"
+                name="year"
+                id="year"
+                placeholder="YYYY"
+        />
+        <span class="yearError"></span>
+    </section>
+
+    <section class="dateSeparator">
+        <hr/>
+        <button>
+            <img src="/assets/images/icon-arrow.svg" alt="Icon Arrow"/>
+        </button>
+    </section>
+
+    <section class="dateLabel">
+        <div class="date__Text years"><span class="date__Text_years">_ _</span> Years</div>
+        <div class="date__Text months"><span class="date__Text_months">_ _</span> Months</div>
+        <div class="date__Text days"><span class="date__Text_days">_ _</span> Days</div>
+    </section>
+</form>
+
+<div class="attribution">
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+    >Frontend Mentor</a
+    >. Coded by <a href="https://twitter.com/inspikalu" target="_blank" rel="noreferrer noopener">Okereke Clement
+    Kalu</a>.
+</div>
+<script src="/assets/js/script.js"></script>
+</body>
+</html>

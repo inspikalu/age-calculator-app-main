@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+}
+
+body {
+  background-color: hsl(0, 0%, 86%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+body form {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 1em 1em 10em 1em;
+  max-width: 90%;
+  padding-inline: 3rem;
+}
+body form .dateHolder {
+  display: grid;
+  max-width: 100%;
+  grid-template-areas: "dayLabel monthLabel yearLabel" "dayInput monthInput yearInput" "dayError monthError yearError";
+  gap: 1rem;
+  padding: 2rem 1rem;
+}
+body form .dateHolder input {
+  padding: 1rem 0.4rem;
+  border-radius: 0.5rem;
+  border: 1px solid hsl(0, 0%, 8%);
+  text-indent: 1em;
+  min-width: 100%;
+}
+body form .dateHolder input:hover {
+  transition: all 0.2s;
+  border: 2px solid hsl(259, 100%, 65%);
+}
+body form .dateHolder input.error {
+  border-color: hsl(0, 100%, 67%);
+}
+body form .dateHolder label {
+  color: hsl(0, 1%, 44%);
+  padding-left: 0.3em;
+}
+body form .dateHolder label.error {
+  color: hsl(0, 100%, 67%);
+}
+body form .dateHolder label[for=day] {
+  grid-area: dayLabel;
+}
+body form .dateHolder input#day {
+  grid-area: dayInput;
+}
+body form .dateHolder label[for=month] {
+  grid-area: monthLabel;
+}
+body form .dateHolder input#month {
+  grid-area: monthInput;
+}
+body form .dateHolder label[for=year] {
+  grid-area: yearLabel;
+}
+body form .dateHolder input#year {
+  grid-area: yearInput;
+}
+body form .dateHolder .dayError {
+  grid-area: dayError;
+}
+body form .dateHolder .monthError {
+  grid-area: monthError;
+}
+body form .dateHolder .yearError {
+  grid-area: yearError;
+}
+body form .dateHolder .dayError,
+body form .dateHolder .monthError,
+body form .dateHolder .yearError {
+  color: hsl(0, 100%, 67%);
+}
+body form .dateSeparator {
+  position: relative;
+}
+body form .dateSeparator hr {
+  width: 100%;
+}
+body form .dateSeparator button {
+  background-color: hsl(259, 100%, 65%);
+  border: 0;
+  border-radius: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+body form .dateSeparator button:hover {
+  background-color: hsl(0, 0%, 8%) !important;
+}
+body form .dateLabel {
+  font-size: 3rem;
+  font-family: Poppins;
+  padding: 2.4rem 1.4rem 5rem 1.4rem;
+}
+body form .dateLabel .date__Text span {
+  color: hsl(259, 100%, 65%);
+  letter-spacing: -4px;
+  font-weight: bolder;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 720px) {
+  body form {
+    max-width: 60%;
+  }
+  body form .dateHolder {
+    width: 80%;
+  }
+  body form .dateSeparator button {
+    left: 93%;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
