@@ -16,7 +16,7 @@ body {
 body form {
   background-color: hsl(0, 0%, 100%);
   border-radius: 1em 1em 10em 1em;
-  max-width: 90%;
+  max-width: 80%;
   padding-inline: 3rem;
 }
 body form .dateHolder {
